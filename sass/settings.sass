@@ -1,0 +1,28 @@
+/* File with default style settings */
+/* Colours settings */
+$primary: #0f7bff
+$primary-light: #ebf9ff
+$primary-dark: #0063dd
+$dark: #333333
+$light: #f5fcfd
+$grey: #929292
+
+/* Mixins */
+@mixin button
+	display: inline-block
+	text-transform: capitalize
+	user-select: none
+	cursor: pointer
+	transition: all ease .2s
+	white-space: nowrap
+
+@mixin button-around
+	padding: 10px 45px
+	border: 2px solid transparent
+	border-radius: 25px
+
+@mixin default-text
+	font-family: 'Quicksand', sans-serif
+	font-size: 16px
+	font-weight: 400
+

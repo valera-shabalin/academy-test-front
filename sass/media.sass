@@ -1,0 +1,244 @@
+/* Media SASS file */
+
+/* Settings for mobile phone */
+@media (min-width: 320px) and (max-width: 475px)
+	h1
+		font-size: 30px
+	h2
+		font-size: 30px
+	.header
+		padding: 0 15px
+		&__logo
+			padding: 30px 20px
+			font-size: 32px
+	.main
+		padding-top: 100px
+		background-size: 200%
+		background-position: bottom
+		border-bottom: 1px solid #eeeeee
+		img 
+			max-width: 300px
+	.advantages
+		padding: 60px 0
+	.about
+		padding: 60px 0
+		&__line
+			display: none
+	.plan
+		padding: 60px 0
+		&__card
+			margin: auto
+	.news
+		padding: 60px 0
+		&__post
+			margin-top: 30px
+			flex-direction: column
+			align-items: start
+			.info
+				margin-left: 0
+				margin-top: 20px
+	.trial
+		padding: 60px 0
+	.footer
+		&__top
+			padding: 60px 0
+			.footer__form
+				input
+					font-size: 12px
+					padding: 10px 10px
+		&__down
+			.footer__menu
+				margin: 10px 0
+				flex-direction: column
+			.footer__up
+				bottom: 10px
+				right: 10px
+	.scope
+		padding: 60px 0
+		&__item
+			.background
+				width: 325px
+				height: 385px
+			img
+				max-width: 200px
+		.scope_first
+			margin: 30px 0 100px 0
+			img
+				&:nth-of-type(1)
+					top: 35%
+					right: 5%
+				&:nth-of-type(2)
+					right: 30%
+		.scope_second
+			margin-top: 30px
+			img
+				&:nth-of-type(1)
+					left: 5%
+				&:nth-of-type(2)
+					top: 40%
+					left: 35%
+	.people
+		padding: 60px 0
+		background-image: none
+
+/* Settings for laptop */
+@media (min-width: 476px) and (max-width: 767px)
+	.header
+		padding: 0 15px
+	.main
+		background-size: 180%
+		background-position: bottom
+		border-bottom: 1px solid #eeeeee
+		img
+			max-width: 450px
+	.advantages
+		padding: 60px 0
+	.about
+		padding: 60px 0
+		&__line
+			display: none
+	.plan
+		padding: 60px 0
+		&__card
+			margin: auto
+	.footer
+		&__top
+			padding: 80px 0
+	.scope
+		padding: 60px 0
+		.scope_first
+			margin-bottom: 100px
+			img
+				&:nth-of-type(1)
+					top: 35%
+					right: 0%
+				&:nth-of-type(2)
+					right: 30%
+		.scope_second
+			margin-bottom: 100px
+			img
+				&:nth-of-type(1)
+					left: 5%
+				&:nth-of-type(2)
+					top: 40%
+					left: 50%
+	.people
+		padding: 60px 0
+		background-image: none
+	.footer
+		&__down
+			.footer__up
+				bottom: 10px
+				right: 10px
+
+/* Setting for small screen */
+@media (min-width: 768px) and (max-width: 991px)
+	.header
+		padding: 0 70px
+	.main
+		background-size: 145%
+		background-position: bottom 0
+		img
+			max-width: 650px
+	.about
+		&__line
+			width: 500px
+			top: 50%
+	.plan
+		padding: 60px 0
+		&__card
+			margin: auto
+	.scope
+		padding: 60px 0
+		.scope_first
+			margin-bottom: 100px
+			img
+				&:nth-of-type(1)
+					top: 35%
+					right: 0%
+				&:nth-of-type(2)
+					right: 30%
+		.scope_second
+			margin-bottom: 100px
+			img
+				&:nth-of-type(1)
+					left: -10%
+				&:nth-of-type(2)
+					left: 35%
+	.people
+		padding: 60px 0
+		background-position: top 0 left -250px
+
+/* Settings for middle screen */
+@media (min-width: 992px) and (max-width: 1199px)
+	.header
+		padding: 0 70px
+	.main
+		background-size: 123%
+		background-position: bottom 0% left 20%
+		img
+			max-width: 600px
+	.about
+		&__line
+			top: 50%
+	.scope
+		&__item
+			.background
+				width: 375px
+				height: 435px
+	.people
+		background-position: top 0 left -270px
+
+/* Settings for large screen */
+@media (min-width: 1200px) and (max-width: 1650px)
+	.main
+		padding: 130px
+		background-size: 110%
+		background-position: bottom 0 left 90px
+		img
+			max-width: 600px	
+	.people
+		background-position: top 0 left -210px
+
+/* Settings for extra large screen */
+@media (min-width: 1651px) and (max-width: 1920px)
+	.main
+		background-size: 100%
+		background-position: bottom 0 left 290px
+	.people
+		background-position: top 0 left -70px
+
+@media (min-width: 1921px) and (max-width: 2560px)
+	.main
+		background-size: 120%
+		background-position: bottom 0% left -30%
+	.people
+		background-position: left
+
+/* Settings for small mobile phone (iPhone SE, iPhone 6s, Samsung Galaxy S5 and other) */
+
+@media screen and (max-height: 670px)
+	.header
+		&__logo
+			padding: 20px 10px
+			font-size: 22px
+		&.js_scroll &__logo
+			font-size: 22px
+	.main
+		padding-top: 80px
+		h1
+			font-size: 22px
+		p 
+			font-size: 14px
+			margin: 10px 0
+		
+@media screen and (max-height: 669px)
+	.main
+		background-image: none
+		
+		img
+			display: none
+
+@media (min-height: 1000px) and (max-height: 1500px)
+	.main
+		padding-top: 300px

@@ -1,0 +1,571 @@
+/* Main SASS file */
+@import 'reset.sass'
+@import 'fonts.sass'
+@import 'settings.sass'
+
+html
+	overflow-x: hidden
+
+body
+	@include default-text
+	position: relative
+	max-width: 100vw
+	line-height: 1.6em
+	color: $grey
+	overflow-x: hidden
+
+h1, h2, h3, h4, h5, h6
+	line-height: 1.2em
+
+h1
+	font-size: 36px
+	font-weight: 700
+	color: $dark
+
+h2
+	position: relative
+	font-size: 32px
+	font-weight: 500
+	color: $dark
+	&:before
+		content: ''
+		height: 108px
+		width: 108px
+		position: absolute
+		left: 50%
+		top: 50%
+		background: url('../img/title.png')
+		transform: translate(-50%, -50%)
+		z-index: -1
+
+h3
+	font-size: 32px
+	font-weight: 500
+	color: $dark
+
+h4
+	font-size: 18px
+	font-weight: 500
+	color: $dark
+
+a:hover
+	text-decoration: none
+	color: $primary
+	transition: all ease .2s
+
+.btn_dark
+	@include button
+	@include button-around
+	text-transform: uppercase
+	border-radius: 25px
+	background: $primary-dark
+	color: #fff
+	&:hover
+		color: #fff
+
+.btn_primary
+	@include button
+	@include button-around
+	background: $primary
+	color: #fff
+	&:hover
+		background: $primary-dark
+		color: #fff
+		box-shadow: 0px 0px 15px -2px $primary
+
+.btn_trans
+	@include button
+	@include button-around
+	background: transparent
+	color: $primary
+	border: 2px solid $primary
+	&:hover
+		border: 2px solid $primary-dark
+		background: $primary-dark
+		color: #fff
+		box-shadow: 0px 0px 15px -2px $primary
+
+.btn_lite
+	@include button
+	font-weight: 500
+	svg
+		margin-left: 5px
+		transition: all ease .2s
+	&:hover
+		svg 
+			transform: translateX(5px)
+
+.btn_big
+	@include button
+	padding: 30px 60px
+	font-weight: 700
+	background: $primary
+	color: #fff
+	border-radius: 5px
+	svg
+		padding-bottom: 3px
+		margin-left: 5px
+		transition: all ease .2s
+	&:hover
+		color: #fff
+		svg 
+			transform: translateX(5px)
+
+.btn_up
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 50px
+	height: 50px
+	position: fixed
+	right: 20px
+	bottom: 20px
+	border-radius: 5px
+	background: #fff 
+	color: $primary
+	cursor: pointer
+	z-index: 13
+	box-shadow: 0px 0px 15px -5px #848484
+	transition: all ease .2s
+	opacity: 0
+	visibility: hidden
+	&.js_scroll
+		opacity: 1
+		visibility: visible
+	&:hover
+		background: $primary
+		color: #fff
+
+.under-title
+	text-align: center
+
+.mobile-menu
+	display: flex
+	align-items: center
+	justify-content: center
+	position: fixed
+	right: -110%
+	width: 100vw
+	height: 100vh
+	background: $primary
+	z-index: 14
+	overflow: hidden
+	transition: all ease .4s
+	&.js_active
+		right: 0
+	&__nav
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__link
+		position: relative
+		margin: 10px 0
+		font-size: 20px
+		font-weight: 500
+		text-align: center
+		text-transform: uppercase
+		color: #fff
+		&:before 
+			position: absolute
+			bottom: -5px
+			left: 50%
+			content: ''
+			height: 2px
+			width: 130%
+			background: #fff
+			transform: translateX(-50%) scaleX(0)
+			transform-origin: left
+			transition: all ease .2s
+		&:hover
+			color: #fff
+			&:before 
+				transform: translateX(-50%) scaleX(1)
+
+.header
+	position: absolute
+	padding: 0 190px
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	z-index: 15
+	&.js_scroll
+		position: fixed
+		background: $primary
+	&.js_scroll &__logo
+		padding: 20px 10px
+		font-size: 32px
+	&.js_scroll &__humb span
+		background: #fff
+	&.js_scroll &__menu &__link
+		color: #fff
+	&__logo
+		display: inline-block
+		padding: 34px 25px
+		font-size: 36px
+		font-weight: 700
+		color: #fff 
+		background: $primary
+		border-radius: 0 0 20px 20px
+		user-select: none
+		transition: all ease .2s
+		&:hover
+			color: #fff
+	&__menu &__link
+		margin-left: 40px
+		font-weight: 500
+		text-transform: uppercase
+		color: $grey
+		&.current
+			color: $primary
+	&__humb
+		span 
+			margin: 5px 0
+			display: block
+			height: 5px
+			width: 40px
+			background: $primary
+			border-radius: 3px
+			transition: all ease .2s
+		&.js_active
+			span 
+				background: #fff
+				&:nth-of-type(1)
+					width: 20px
+				&:nth-of-type(2)
+					width: 30px
+	.btn_dark
+		margin-left: 50px
+
+.main
+	padding-top: 140px
+	position: relative
+	height: 100vh
+	background: $light
+	background-image: url('../img/bg_main.png')
+	background-size: cover
+	background-position: bottom 0 left 5%
+	background-repeat: no-repeat
+	overflow: hidden
+	h1
+		text-align: center
+	p 
+		text-align: center
+		margin: 25px 0
+	img 
+		max-width: 710px
+		position: absolute
+		left: 50%
+		bottom: 0
+		transform: translateX(-50%)
+
+.advantages
+	position: relative
+	padding: 160px 0 130px 0
+	background: $light
+	&__item
+		padding: 40px 15px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-align: center
+		background: #fff
+		box-shadow: 0px 0px 15px 0 #f0f0f0
+		border-radius: 5px
+		.icon
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 70px
+			width: 70px
+			border-radius: 50%
+		h4
+			margin: 10px 0 15px 0
+	&__down
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		left: 50%
+		top: -35px
+		height: 70px
+		width: 70px
+		font-size: 30px
+		background: #fff
+		color: #dcdcdc
+		border: 1px solid #dcdcdc
+		border-radius: 50%
+		cursor: pointer
+		transition: all ease .2s
+		transform: translateX(-50%)
+		&:hover
+			color: $primary
+			border: 1px solid $primary
+
+.scope
+	margin-bottom: 70px
+	&__item
+		position: relative
+		.background
+			margin-top: 70px
+			position: relative
+			width: 425px
+			height: 485px
+			background: $primary
+			border-radius: 30px
+			transform: rotate(-40deg)
+			z-index: 3
+		img
+			position: absolute
+			border-radius: 5px
+			box-shadow: 0px 0px 15px -5px #8e8e8e
+	.scope_first
+		img
+			&:nth-of-type(1)
+				top: 25%
+				right: -20%
+				z-index: 5
+			&:nth-of-type(2)
+				top: 20%
+				right: 10%
+				z-index: 4
+	.scope_second
+		img
+			&:nth-of-type(1)
+				top: 17%
+				left: -20%
+				z-index: 4
+			&:nth-of-type(2)
+				top: 20%
+				left: 25%
+				z-index: 5
+	p 
+		padding: 30px 0
+
+.about
+	position: relative
+	padding: 130px 0
+	background: $light
+	h2
+		text-align: center
+	.under-title
+		margin: 25px 0
+	&__item
+		margin: 20px auto
+		max-width: 300px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+		.icon
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 100px
+			width: 100px
+			border-radius: 50%
+			background: #dfedff
+		h4
+			margin: 15px 0 25px 0
+	&__line
+		position: absolute
+		left: 50%
+		top: 52%
+		width: 700px
+		height: 1px
+		background: $primary
+		transform: translateX(-50%)
+
+.plan	
+	padding: 130px 0
+	&__desc
+		margin: 20px 0 30px 0
+	&__btns
+		white-space: nowrap
+		.btn_primary
+			border-radius: 25px 0 0 25px
+		.btn_trans
+			border-radius: 0 25px 25px 0
+	&__card
+		max-width: 400px
+		padding: 40px 20px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		box-shadow: 0px 0px 20px 0px #ebebeb
+		border-radius: 5px
+		.icon
+			position: relative
+			height: 100px
+			width: 100px
+			background: #dfedff
+			border-radius: 50%
+			&:before 
+				position: absolute
+				left: 50%
+				top: 50%
+				content: ''
+				width: 75px
+				height: 75px
+				background: #cfe4fe
+				border-radius: 50%
+				transform: translate(-50%, -50%)
+			img
+				position: absolute 
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+		h4
+			margin: 15px 0 20px 0
+		hr 
+			margin: 0
+			width: 165px
+		ul
+			margin-top: 20px
+			li 
+				margin: 5px 0
+				text-align: center
+		span 
+			margin: 15px 0 30px 0
+			font-size: 32px
+			font-weight: 500
+			color: $primary
+			i 
+				font-size: 16px
+
+.people
+	padding: 130px 0
+	background: $light
+	background-image: url('../img/bg_people.png')
+	background-size: contain
+	background-position: top 0 left 0
+	background-repeat: no-repeat
+	h3
+		margin-bottom: 30px
+	&__item
+		position: relative
+		padding: 35px 25px
+		background: #fff
+		i 
+			position: absolute
+			top: 25px
+			right: 20px
+			color: #03a9f4
+		h4
+			margin-bottom: 5px
+		span 
+			font-size: 14px
+		p 
+			margin-top: 10px
+
+.news
+	padding: 130px 0
+	h2
+		text-align: center
+	.under-title
+		margin: 30px 0
+	&__f-post
+		img 
+			width: 100%
+			border-radius: 5px
+		h4
+			margin: 10px 0 15px 0
+			font-size: 24px
+			&:hover
+				color: $primary
+		.btn_lite
+			margin-top: 25px
+	&__post
+		margin-bottom: 35px
+		display: flex
+		img
+			max-height: 150px
+			border-radius: 5px
+		.info
+			margin-left: 20px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			h4:hover
+				color: $primary
+
+.trial
+	padding: 130px 0
+	background: $light
+	h3 
+		margin-bottom: 30px
+
+.footer
+	background: $primary
+	&__top
+		padding: 130px 0
+		border-bottom: 1px solid #fff
+		.footer__logo
+			margin-bottom: 50px
+			font-size: 36px
+			font-weight: 700
+			color: #fff
+		.footer__form
+			width: 100%
+			input
+				width: 100%
+				padding: 15px 30px
+				outline: none
+			input[type=email]
+				border: 2px solid #fff
+				border-radius: 45px 0 0 45px
+				background: transparent
+				color: #fff
+				&::placeholder
+					text-transform: capitalize
+					color: #fff
+			input[type=submit]
+				border: 2px solid #fff
+				border-radius: 0 45px 45px 0
+				font-weight: 700
+				text-transform: uppercase
+				background: #fff
+				color: $primary
+	&__down
+		position: relative
+		padding: 35px 0
+		.copy
+			text-align: center
+			color: #fff
+		.footer__menu
+			display: flex
+			align-items: center
+		.footer__social
+			display: flex
+			align-items: center
+		.footer__link
+			margin-left: 15px
+			color: #d8d8d8
+			cursor: pointer
+			&:hover
+				color: #fff
+
+/* Owl carousel */
+.owl-theme .owl-nav.disabled+.owl-dots
+	margin-top: 20px
+	display: flex
+
+.owl-theme .owl-dots .owl-dot
+	outline: none
+
+.owl-theme .owl-dots .owl-dot span
+	margin: 5px 4px
+	width: 20px
+	height: 10px
+	color: $grey
+	transition: all ease .2s
+
+.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span
+	width: 25px
+	background: $primary
+
+@import 'media.sass'
+
