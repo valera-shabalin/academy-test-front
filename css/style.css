@@ -350,7 +350,7 @@ a:hover {
   padding-top: 140px;
   position: relative;
   height: 100vh;
-  background: #f5fcfd;
+  background: #fff;
   background-image: url("../img/bg_main.png");
   background-size: cover;
   background-position: bottom 0 left 5%;
@@ -431,7 +431,6 @@ a:hover {
   position: relative;
 }
 .scope__item .background {
-  margin-top: 70px;
   position: relative;
   width: 425px;
   height: 485px;
@@ -446,13 +445,16 @@ a:hover {
   box-shadow: 0 0 15px -5px #8e8e8e;
 }
 .scope .scope_first img {
-  top: 25%;
-  right: -20%;
+  top: 14%;
+  right: -25%;
   z-index: 5;
 }
+.scope .scope_second .background {
+  margin-bottom: -70px;
+}
 .scope .scope_second img {
-  top: 17%;
-  left: -20%;
+  top: -5%;
+  left: -8%;
   z-index: 4;
 }
 .scope p {
@@ -842,7 +844,7 @@ a:hover {
     margin: 30px 0 100px 0;
   }
   .scope .scope_first img {
-    top: 30%;
+    top: 15%;
     right: 0;
   }
   .scope .scope_second {
@@ -904,7 +906,7 @@ a:hover {
     margin-bottom: 100px;
   }
   .scope .scope_first img {
-    top: 35%;
+    top: 15%;
     right: -5%;
   }
   .scope .scope_second {
@@ -957,7 +959,7 @@ a:hover {
     margin-bottom: 100px;
   }
   .scope .scope_first img {
-    top: 25%;
+    top: 15%;
     right: -8%;
   }
   .scope .scope_second {
@@ -996,8 +998,8 @@ a:hover {
   }
   .scope .scope_first img {
     max-width: 520px;
-    top: 25%;
-    right: -20%;
+    top: 10%;
+    right: -22%;
   }
   .scope .scope_second img {
     left: 0;
