@@ -125,7 +125,7 @@ a:hover {
   color: #fff;
 }
 .btn_primary:hover {
-  background: #0063dd;
+  background: #0f7bff;
   color: #fff;
   box-shadow: 0px 0px 15px -2px #0f7bff;
 }
@@ -147,10 +147,14 @@ a:hover {
   border: 2px solid #0f7bff;
 }
 .btn_trans:hover {
-  border: 2px solid #0063dd;
-  background: #0063dd;
+  border: 2px solid #0f7bff;
+  background: #0f7bff;
   color: #fff;
   box-shadow: 0px 0px 15px -2px #0f7bff;
+}
+.btn_trans.active {
+  background: #0f7bff;
+  color: #fff;
 }
 
 .btn_lite {
@@ -549,11 +553,12 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 .plan__card h4 {
+  font-weight: 700;
   margin: 15px 0 20px 0;
 }
 .plan__card hr {
   margin: 0;
-  width: 165px;
+  width: 90%;
 }
 .plan__card ul {
   margin-top: 20px;
@@ -610,6 +615,7 @@ a:hover {
   padding: 130px 0;
 }
 .news h2 {
+  font-weight: 700;
   text-align: center;
 }
 .news .under-title {
@@ -650,6 +656,7 @@ a:hover {
   background: #f5fcfd;
 }
 .trial h3 {
+  font-weight: 700;
   margin-bottom: 30px;
 }
 
@@ -825,31 +832,24 @@ a:hover {
     padding: 60px 0;
   }
   .scope__item .background {
-    width: 325px;
-    height: 385px;
+    width: 305px;
+    height: 305px;
   }
   .scope__item img {
-    max-width: 200px;
+    max-width: 310px;
   }
   .scope .scope_first {
     margin: 30px 0 100px 0;
   }
-  .scope .scope_first img:nth-of-type(1) {
-    top: 35%;
-    right: 5%;
-  }
-  .scope .scope_first img:nth-of-type(2) {
-    right: 30%;
+  .scope .scope_first img {
+    top: 30%;
+    right: 0;
   }
   .scope .scope_second {
     margin-top: 30px;
   }
-  .scope .scope_second img:nth-of-type(1) {
-    left: 5%;
-  }
-  .scope .scope_second img:nth-of-type(2) {
-    top: 40%;
-    left: 35%;
+  .scope .scope_second img {
+    left: 0;
   }
 
   .people {
@@ -897,25 +897,21 @@ a:hover {
   .scope {
     padding: 60px 0;
   }
+  .scope img {
+    max-width: 470px;
+  }
   .scope .scope_first {
     margin-bottom: 100px;
   }
-  .scope .scope_first img:nth-of-type(1) {
+  .scope .scope_first img {
     top: 35%;
-    right: 0%;
-  }
-  .scope .scope_first img:nth-of-type(2) {
-    right: 30%;
+    right: -5%;
   }
   .scope .scope_second {
     margin-bottom: 100px;
   }
-  .scope .scope_second img:nth-of-type(1) {
+  .scope .scope_second img {
     left: 5%;
-  }
-  .scope .scope_second img:nth-of-type(2) {
-    top: 40%;
-    left: 50%;
   }
 
   .people {
@@ -960,21 +956,15 @@ a:hover {
   .scope .scope_first {
     margin-bottom: 100px;
   }
-  .scope .scope_first img:nth-of-type(1) {
-    top: 35%;
-    right: 0%;
-  }
-  .scope .scope_first img:nth-of-type(2) {
-    right: 30%;
+  .scope .scope_first img {
+    top: 25%;
+    right: -8%;
   }
   .scope .scope_second {
     margin-bottom: 100px;
   }
-  .scope .scope_second img:nth-of-type(1) {
-    left: -10%;
-  }
-  .scope .scope_second img:nth-of-type(2) {
-    left: 35%;
+  .scope .scope_second img {
+    left: 0;
   }
 
   .people {
@@ -1003,6 +993,14 @@ a:hover {
   .scope__item .background {
     width: 375px;
     height: 435px;
+  }
+  .scope .scope_first img {
+    max-width: 520px;
+    top: 25%;
+    right: -20%;
+  }
+  .scope .scope_second img {
+    left: 0;
   }
 
   .people {

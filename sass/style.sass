@@ -1,7 +1,7 @@
 /* Main SASS file */
-@import 'reset.sass'
-@import 'fonts.sass'
-@import 'settings.sass'
+@import 'reset'
+@import 'fonts'
+@import 'settings'
 
 html
 	overflow-x: hidden
@@ -59,7 +59,7 @@ a:hover
 	background: $primary
 	color: #fff
 	&:hover
-		background: $primary-dark
+		background: $primary
 		color: #fff
 		box-shadow: 0px 0px 15px -2px $primary
 
@@ -71,10 +71,13 @@ a:hover
 	color: $primary
 	border: 2px solid $primary
 	&:hover
-		border: 2px solid $primary-dark
-		background: $primary-dark
+		border: 2px solid $primary
+		background: $primary
 		color: #fff
 		box-shadow: 0px 0px 15px -2px $primary
+	&.active
+		background: $primary
+		color: #fff
 
 .btn_lite
 	@include button
@@ -84,7 +87,7 @@ a:hover
 		margin-left: 15px
 		transition: all ease .2s
 	&:hover
-		svg 
+		svg
 			transform: translateX(5px)
 
 .btn_big
@@ -100,7 +103,7 @@ a:hover
 		transition: all ease .2s
 	&:hover
 		color: #fff
-		svg 
+		svg
 			transform: translateX(5px)
 
 .btn_up
@@ -152,7 +155,7 @@ a:hover
 		text-align: center
 		text-transform: uppercase
 		color: #fff
-		&:before 
+		&:before
 			position: absolute
 			bottom: -5px
 			left: 50%
@@ -165,7 +168,7 @@ a:hover
 			transition: all ease .2s
 		&:hover
 			color: #fff
-			&:before 
+			&:before
 				transform: translateX(-50%) scaleX(1)
 
 .header
@@ -191,7 +194,7 @@ a:hover
 		padding: 34px 25px
 		font-size: 36px
 		font-weight: 700
-		color: #fff 
+		color: #fff
 		background: $primary
 		border-radius: 0 0 20px 20px
 		user-select: none
@@ -206,7 +209,7 @@ a:hover
 		&.current
 			color: $primary
 	&__humb
-		span 
+		span
 			margin: 5px 0
 			display: block
 			height: 5px
@@ -215,7 +218,7 @@ a:hover
 			border-radius: 3px
 			transition: all ease .2s
 		&.js_active
-			span 
+			span
 				background: #fff
 				&:nth-of-type(1)
 					width: 20px
@@ -236,10 +239,10 @@ a:hover
 	overflow: hidden
 	h1
 		text-align: center
-	p 
+	p
 		text-align: center
 		margin: 25px 0
-	img 
+	img
 		max-width: 710px
 		position: absolute
 		left: 50%
@@ -319,7 +322,7 @@ a:hover
 			top: 17%
 			left: -20%
 			z-index: 4
-	p 
+	p
 		padding: 30px 0
 
 .about
@@ -357,7 +360,7 @@ a:hover
 		background: $primary
 		transform: translateX(-50%)
 
-.plan	
+.plan
 	padding: 130px 0
 	&__desc
 		margin: 20px 0 30px 0
@@ -384,7 +387,7 @@ a:hover
 			width: 114px
 			background: #dfedff
 			border-radius: 50%
-			&:before 
+			&:before
 				position: absolute
 				left: 50%
 				top: 50%
@@ -395,26 +398,27 @@ a:hover
 				border-radius: 50%
 				transform: translate(-50%, -50%)
 			img
-				position: absolute 
+				position: absolute
 				left: 50%
 				top: 50%
 				transform: translate(-50%, -50%)
 		h4
+			font-weight: 700
 			margin: 15px 0 20px 0
-		hr 
+		hr
 			margin: 0
-			width: 165px
+			width: 90%
 		ul
 			margin-top: 20px
-			li 
+			li
 				margin: 5px 0
 				text-align: center
-		span 
+		span
 			margin: 15px 0 30px 0
 			font-size: 32px
 			font-weight: 500
 			color: $primary
-			i 
+			i
 				font-size: 16px
 
 .people
@@ -432,26 +436,27 @@ a:hover
 		padding: 40px 30px
 		background: #fff
 		color: $grey
-		i 
+		i
 			position: absolute
 			top: 40px
 			right: 30px
 			color: $primary
 		h4
 			margin-bottom: 5px
-		span 
+		span
 			font-size: 14px
-		p 
+		p
 			margin-top: 10px
 
 .news
 	padding: 130px 0
 	h2
+		font-weight: 700
 		text-align: center
 	.under-title
 		margin: 30px 0
 	&__f-post
-		img 
+		img
 			width: 100%
 			border-radius: 5px
 		h4
@@ -477,7 +482,8 @@ a:hover
 .trial
 	padding: 130px 0
 	background: $light
-	h3 
+	h3
+		font-weight: 700
 		margin-bottom: 30px
 
 .footer
@@ -550,5 +556,5 @@ a:hover
 	width: 25px
 	background: $primary
 
-@import 'media.sass'
+@import 'media'
 
